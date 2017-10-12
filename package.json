@@ -1,0 +1,49 @@
+{
+  "name": "redux-boilerplate",
+  "version": "1.0.0",
+  "description": "redux, react, boilerplate",
+  "main": "main.js",
+  "scripts": {
+    "start": "export NODE_ENV=development && webpack",
+    "prod": "export NODE_ENV=production && webpack",
+    "test": "jest --coverage -u -c=./configs/jest.config.js"
+  },
+  "author": "Ievgen Bogomolov",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.3.0",
+    "prop-types": "^15.5.10"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "*",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-class-properties": "^6.10.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.23.1",
+    "enzyme": "^2.9.1",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.1.0",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "path": "^0.12.7",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^15.6.1",
+    "redux": "^3.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.13.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2",
+    "webpack-node-externals": "^1.6.0"
+  }
+}

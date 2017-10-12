@@ -1,0 +1,24 @@
+@import "../../../assets/themes/default/color_cheme";
+
+$footer-height: 50px;
+
+.footer{
+  width: 100%;
+  height: $footer-height;
+  position: absolute;
+  display: table;
+  bottom: 0;
+  background-color: $scnd-clr;
+  .one{
+    display: table-cell;
+  }
+  .two{
+    display: table-cell;
+  }
+  .three{
+    display: table-cell;
+  }
+  .four{
+    display: table-cell;
+  }
+}

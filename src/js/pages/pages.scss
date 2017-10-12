@@ -1,0 +1,7 @@
+$default-wrapper-height: 100%;
+$footer-and-header-height: 125px;
+.main{
+  display: table;
+  width: 100%;
+  min-height:  calc(#{$default-wrapper-height} - #{$footer-and-header-height});
+}

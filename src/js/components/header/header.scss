@@ -1,0 +1,57 @@
+@import "../../../assets/themes/default/color_cheme";
+
+$header-height: 75px;
+
+.header{
+  width: 100%;
+  position: relative;
+  height: $header-height;
+  background-color: $scnd-clr;
+  .section{
+    display: table;
+    width: 100%;
+    height: 50%;
+  }
+  .right{
+    width: 20%;
+    display: table-cell;
+  }
+  .middle{
+    width: 60%;
+    display: table-cell;
+    text-align: center;
+    text-transform: capitalize;
+    vertical-align: middle;
+    color: $font-pr-clr;
+  }
+  .left{
+    width: 20%;
+    display: table-cell;
+  }
+
+  .navigation{
+    width: 100%;
+    height:100%;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    display: table;
+    background-color: $third-clr;
+    table-layout: fixed;
+  }
+  .inLine{
+    width: auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .active{
+    background-color: $fourth-clr;
+  }
+  a{
+    color: $font-pr-clr;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}
+
