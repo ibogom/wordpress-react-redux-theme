@@ -1,6 +1,6 @@
 You are welcome to use this project if it is a better fit for your needs, but if you are brand new to the ecosystem I highly recommend checking out something that has received more recent updates.
 
-# REACT REDUX BOILERPLATE
+# WORDPRESS REACT REDUX THEME
 [![Build Status](https://travis-ci.org/ibogom/react-redux-boilerplate.svg?branch=master)](https://travis-ci.org/ibogom/react-redux-boilerplate/builds/277822177)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
@@ -11,7 +11,7 @@ This project was started as development tools that should help web developers cr
 After confirming that your environment meets the above requirements, you can create a new project based on `react-redux-boilerplate` by doing the following:
 
 ```bash
-$ git clone https://github.com/ibogom/react-redux-boilerplate <my-project-name>
+$ git clone https://github.com/ibogom/wordpress-react-redux-theme <my-project-name>
 $ cd <my-project-name>
 ```
 
