@@ -15,8 +15,8 @@ class PageHandler extends React.Component {
     }
 
     componentDidMount(){
-        // this.props.dispatch(RouteActions.setRoute('root'));
-        this.props.dispatch(ApiActions.fetchPosts());
+        this.props.dispatch(RouteActions.setRoute(this.props.page.title));
+        this.props.dispatch(ApiActions.getPosts());
     }
 
     getPostData(post, i){

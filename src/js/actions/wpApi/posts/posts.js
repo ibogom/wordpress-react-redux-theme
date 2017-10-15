@@ -27,7 +27,7 @@ function receivePostsFail(id, error) {
 }
 
 
-export function fetchPosts(id) {
+export function getPosts(id) {
     const url = apiTypes.API_POSTS_URL + (id || '');
     return dispatch => {
         dispatch(requestPosts(id));

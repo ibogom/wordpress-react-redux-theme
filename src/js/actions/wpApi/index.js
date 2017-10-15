@@ -1,1 +1,2 @@
-export { fetchPosts } from './posts/posts';
+export { getPosts } from './posts/posts';
+export { getPages } from './pages/pages';

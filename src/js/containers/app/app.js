@@ -8,7 +8,9 @@ import { Header, Footer } from '../../components';
 
 /** PAGES NAVIGATION **/
 import Pages from '../../pages';
-import PagesList from '../../pages/pages';
+
+/** ACTIONS **/
+import { ApiActions } from '../../actions';
 
 class App extends React.Component {
 
@@ -21,10 +23,20 @@ class App extends React.Component {
         store: React.PropTypes.object
     };
 
+    componentDidMount(){
+        this.props.dispatch(ApiActions.getPages());
+    }
+
     render() {
+        const pages = this.props.pages && this.props.pages.data.map(page => {
+            return {
+                title: page.title.rendered,
+                url : page.slug
+            };
+        });
         return (<div className={appWrapper}>
-                    <Header route={this.props.route} pages={PagesList} />
-                    <Pages posts={this.props.posts} />
+                    <Header route={this.props.route} pages={pages} />
+                    <Pages posts={this.props.posts} pages={pages} />
                     <Footer/>
                 </div>)
     }
@@ -33,7 +45,8 @@ class App extends React.Component {
 function mapStateToProps (state) {
     return {
         route: state.routes.route,
-        posts: state.api.posts
+        posts: state.api.posts,
+        pages: state.api.pages
     }
 }
 

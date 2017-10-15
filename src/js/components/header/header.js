@@ -6,16 +6,16 @@ export default class Header extends React.Component {
 
     static propTypes = {
         route: React.PropTypes.string,
-        pages: React.PropTypes.object
+        pages: React.PropTypes.array
     };
 
     static defaultProps = {};
 
     renderNavigation() {
-        const links = Object.keys(this.props.pages).map((name, i) => {
-            return <Link key={i} to={this.props.pages[name]}
-                         className={inLine + (this.props.route === name ? ' ' + active : '')}>
-                {name}
+        const links = this.props.pages && this.props.pages.map((page, i) => {
+            return <Link key={i} to={page.url}
+                         className={inLine + (this.props.route === page.title ? ' ' + active : '')}>
+                {page.title}
             </Link>
         });
         return (<nav className={navigation}>

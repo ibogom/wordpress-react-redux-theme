@@ -7,7 +7,7 @@ class NotFound extends React.Component {
 
     componentDidMount(){
         this.props.dispatch(RouteActions.setRoute('not found'));
-        this.props.dispatch(ApiActions.fetchPosts());
+        this.props.dispatch(ApiActions.getPosts());
     }
 
     render() {
