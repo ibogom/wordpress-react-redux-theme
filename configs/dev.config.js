@@ -1,5 +1,4 @@
 const baseConfig = require('./base.config.js');
-const path = require('path');
 
 const devConfig = Object.assign({}, baseConfig, {
 

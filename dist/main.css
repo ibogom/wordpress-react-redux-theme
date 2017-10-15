@@ -1,8 +1,8 @@
-._35KP5 {
+.pages__main___35KP5 {
   display: table;
   width: 100%;
   min-height: calc(100% - 125px); }
-._3fytj {
+.app__appWrapper___3fytj {
   min-height: 100%; }
 /* DEFAULT BACKGROUND COLORS */
 /* DEFAULTS FONTS COLORS */
@@ -54,7 +54,7 @@ textarea {
   height: 35px;
   border-radius: 5px;
   -webkit-appearance: none;
-  background-color: #50597b;
+  background-color: #aaaaaa;
   border: 1px solid #1f253d;
   padding: 5px 15px;
   outline: 0;
@@ -79,7 +79,7 @@ textarea {
   input[type='password']:disabled,
   input[type='number']:disabled,
   textarea:disabled {
-    background-color: #1f253d; }
+    background-color: #fff; }
 
 input[type='date']:before {
   content: attr(placeholder);
@@ -91,16 +91,16 @@ input[type='date']:before {
   float: left; }
 
 ::-webkit-input-placeholder {
-  color: #9099b7; }
+  color: #000000; }
 
 ::-moz-placeholder {
-  color: #9099b7; }
+  color: #000000; }
 
 :-moz-placeholder {
-  color: #9099b7; }
+  color: #000000; }
 
 :-ms-input-placeholder {
-  color: #9099b7; }
+  color: #000000; }
 
 html, body {
   position: relative;
@@ -111,12 +111,12 @@ html, body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  background-color: #1f253d; }
+  background-color: #fff; }
 
-.N9uzN {
+.main__main___N9uzN {
   display: table;
   min-height: calc(100% - 100px); }
-  .N9uzN ._1N6sQ {
+  .main__main___N9uzN .main__wrapper___1N6sQ {
     display: table-cell;
     vertical-align: middle; }
 
@@ -130,20 +130,42 @@ section {
 /* DEFAULTS BORDER COLORS */
 /* CUSTOM VARIABLES */
 /* DEFAULT INDEXES */
-._1YS7V {
+.page__postsWrapper___H09bu {
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 1px solid #cfcfcf; }
+  .page__postsWrapper___H09bu .page__postElement___17ZnO {
+    width: 100%;
+    background-color: #f2f2f2; }
+  .page__postsWrapper___H09bu .page__postData___16EIr {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-transform: capitalize; }
+/* DEFAULT BACKGROUND COLORS */
+/* DEFAULTS FONTS COLORS */
+/* DEFAULTS BUTTONS COLORS */
+/* SOCIAL LINKS COLORS */
+/* DEFAULTS HEADER COLORS */
+/* DEFAULTS BORDER COLORS */
+/* CUSTOM VARIABLES */
+/* DEFAULT INDEXES */
+.footer__footer___1YS7V {
   width: 100%;
   height: 50px;
   position: absolute;
   display: table;
   bottom: 0;
-  background-color: #394264; }
-  ._1YS7V ._2aLck {
+  background-color: #f2f2f2; }
+  .footer__footer___1YS7V .footer__one___2aLck {
     display: table-cell; }
-  ._1YS7V ._3AU6I {
+  .footer__footer___1YS7V .footer__two___3AU6I {
     display: table-cell; }
-  ._1YS7V ._1qRuC {
+  .footer__footer___1YS7V .footer__three___1qRuC {
     display: table-cell; }
-  ._1YS7V ._2PCsK {
+  .footer__footer___1YS7V .footer__four___2PCsK {
     display: table-cell; }
 /* DEFAULT BACKGROUND COLORS */
 /* DEFAULTS FONTS COLORS */
@@ -153,45 +175,46 @@ section {
 /* DEFAULTS BORDER COLORS */
 /* CUSTOM VARIABLES */
 /* DEFAULT INDEXES */
-.zmpOo {
+.header__header___zmpOo {
   width: 100%;
   position: relative;
   height: 75px;
-  background-color: #394264; }
-  .zmpOo ._13pLl {
+  background-color: #fff; }
+  .header__header___zmpOo .header__section___13pLl {
     display: table;
     width: 100%;
-    height: 50%; }
-  .zmpOo ._2dBBH {
+    height: 50%;
+    border-bottom: 1px solid #cfcfcf; }
+  .header__header___zmpOo .header__right___2dBBH {
     width: 20%;
     display: table-cell; }
-  .zmpOo ._1Avoi {
+  .header__header___zmpOo .header__middle___1Avoi {
     width: 60%;
     display: table-cell;
     text-align: center;
     text-transform: capitalize;
     vertical-align: middle;
-    color: #fff; }
-  .zmpOo ._2Z0Y_ {
+    color: #000000; }
+  .header__header___zmpOo .header__left___2Z0Y_ {
     width: 20%;
     display: table-cell; }
-  .zmpOo ._3kbm_ {
+  .header__header___zmpOo .header__navigation___3kbm_ {
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
     display: table;
-    background-color: #50597b;
+    background-color: #aaaaaa;
     table-layout: fixed; }
-  .zmpOo ._2e1hJ {
+  .header__header___zmpOo .header__inLine___2e1hJ {
     width: auto;
     display: table-cell;
     vertical-align: middle;
     text-align: center; }
-  .zmpOo ._2AI1q {
-    background-color: #11a8ab; }
-  .zmpOo a {
+  .header__header___zmpOo .header__active___2AI1q {
+    background-color: #7c7c7c; }
+  .header__header___zmpOo a {
     color: #fff;
     text-decoration: none;
     text-transform: capitalize; }

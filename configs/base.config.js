@@ -6,7 +6,7 @@ const NODE_ENV = process.env.NODE_ENV;
 const isDevMode = NODE_ENV === 'development';
 
 const extractSass = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
+    filename: "[name].css",
     disable: isDevMode
 });
 
@@ -19,9 +19,9 @@ module.exports = {
     },
 
     output: {
-        path: path.join(__dirname, "../src"),
+        path: path.join(__dirname, "../dist"),
         filename: "[name].min.js",
-        publicPath: 'http://localhost:3000/'
+        publicPath: 'http://localhost:3000'
     },
 
     module: {
@@ -70,8 +70,6 @@ module.exports = {
                 collapseWhitespace: true,
             },
         }),
-
-        new webpack.HotModuleReplacementPlugin(),
 
         extractSass
     ]

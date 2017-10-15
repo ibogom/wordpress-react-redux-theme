@@ -1,5 +1,11 @@
-import * as actionTypes from './actionTypes';
-import * as RouteActions from './routes';
+import * as apiTypes from './wpApi/apiTypes';
+import * as ApiActions from './wpApi';
 
-export { actionTypes }
+import * as routeTypes from './routes/routeTypes';
+import * as RouteActions from './routes/routes';
+
+export { apiTypes }
+export { ApiActions }
+
+export { routeTypes }
 export { RouteActions }

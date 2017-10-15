@@ -3,18 +3,18 @@ import {Switch, Route} from 'react-router-dom';
 
 /** ROUTES **/
 import NotFound from './404/404';
-import Root from './root/root';
-import PagesList from './pages';
+import PageHandler from './pageHandler/pageHandler';
 
 import { main } from './pages.scss';
+import pageList from './pages';
 
 export default class Pages extends React.Component {
     render() {
         return (<main className={main}>
             <Switch>
-                <Route exact path={PagesList.root} component={Root}/>
-                <Route component={NotFound}/>
+                <Route path='*' render={props=> <PageHandler posts={this.props.posts} {...props} />}/>
             </Switch>
+            { this.props.children }
         </main>)
     }
 };

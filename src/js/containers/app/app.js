@@ -12,17 +12,19 @@ import PagesList from '../../pages/pages';
 
 class App extends React.Component {
 
+    constructor(props){
+        super(props);
+
+    }
+
     static contextTypes = {
         store: React.PropTypes.object
     };
 
     render() {
-        const state = this.context.store.getState();
-        const route = state.routes && state.routes.route ? state.routes.route : '';
-
         return (<div className={appWrapper}>
-                    <Header route={route} pages={PagesList} />
-                    <Pages/>
+                    <Header route={this.props.route} pages={PagesList} />
+                    <Pages posts={this.props.posts} />
                     <Footer/>
                 </div>)
     }
@@ -30,7 +32,8 @@ class App extends React.Component {
 
 function mapStateToProps (state) {
     return {
-        route: state.routes.route
+        route: state.routes.route,
+        posts: state.api.posts
     }
 }
 

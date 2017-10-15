@@ -1,8 +1,8 @@
-import { actionTypes } from '../actions';
+import { routeTypes } from '../actions';
 
 const routes = (state = [], action) => {
     switch (action.type) {
-        case actionTypes.SET_ROUTE:
+        case routeTypes.SET_ROUTE:
             return {
                 route: action.route,
             };
