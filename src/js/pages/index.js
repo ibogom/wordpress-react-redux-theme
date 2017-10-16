@@ -17,15 +17,15 @@ export default class Pages extends React.Component {
         this.getRoutes = this.getRoutes.bind(this);
     }
 
-    getRoutes(page, i){
-        return (<Route key={i} path={page.url} render={props => <PageHandler
-            posts={this.props.posts}
-            pages={this.props.pages} {...props} />}
+    getRoutes(route, i){
+        return (<Route key={i} path={route.url} render={ props => <PageHandler
+            posts={this.props.posts} pages={this.props.pages} route={route} {...props}
+        />}
         />);
     }
 
     render() {
-        const Routes = this.props.pages && this.props.pages.map((page, i ) => this.getRoutes(page, i));
+        const Routes = this.props.routes && this.props.routes.map((route, i ) => this.getRoutes(route, i));
 
         return (<main className={main}>
             <Switch>

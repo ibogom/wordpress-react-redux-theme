@@ -16,7 +16,6 @@ class App extends React.Component {
 
     constructor(props){
         super(props);
-
     }
 
     static contextTypes = {
@@ -28,15 +27,16 @@ class App extends React.Component {
     }
 
     render() {
-        const pages = this.props.pages && this.props.pages.data.map(page => {
+        const routes = this.props.pages && this.props.pages.data.map(page => {
             return {
                 title: page.title.rendered,
-                url : page.slug
+                url : '/' + page.slug
             };
         });
+
         return (<div className={appWrapper}>
-                    <Header route={this.props.route} pages={pages} />
-                    <Pages posts={this.props.posts} pages={pages} />
+                    <Header route={this.props.route} routes={routes} {...this.props} />
+                    <Pages posts={this.props.posts} routes={routes} {...this.props} />
                     <Footer/>
                 </div>)
     }
