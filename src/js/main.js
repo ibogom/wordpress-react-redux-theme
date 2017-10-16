@@ -13,6 +13,11 @@ import store from './stores';
 /** THEMES **/
 import '../assets/themes/default/main.scss';
 
+/** ACTIONS **/
+import { initialRequest } from './actions';
+
+store.dispatch(initialRequest());
+
 render(<Provider store={store}>
     <Router>
         <App/>

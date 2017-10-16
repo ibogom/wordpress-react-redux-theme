@@ -12,11 +12,13 @@ export default class Header extends React.Component {
     static defaultProps = {};
 
     renderNavigation() {
-        const links = this.props.routes && this.props.routes.map((route, i) => {
-            return <Link key={i} to={route.url}
-                         className={inLine + (this.props.route === route.title ? ' ' + active : '')}>
-                {route.title}
-            </Link>
+        const links = this.props.menus && this.props.menus.map(menu => {
+           return menu.items.map((item, i) =>{
+               return <Link key={i} to={item.object_slug}
+                                className={inLine + (this.props.route === decodeURI(item.object_slug) ? ' ' + active : '')}>
+                       {item.title}
+                   </Link>
+           });
         });
         return (<nav className={navigation}>
             {links}

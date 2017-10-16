@@ -9,3 +9,10 @@ export { ApiActions }
 
 export { routeTypes }
 export { RouteActions }
+
+export function initialRequest() {
+    return dispatch => {
+        dispatch(ApiActions.getPages())
+            .then(dispatch(ApiActions.getMenus()));
+    }
+};

@@ -1,38 +1,35 @@
 import * as apiTypes from '../apiTypes';
 import axios from 'axios';
 
-function requestPosts(id) {
+function requestPosts() {
     return {
         type: apiTypes.GET_POSTS,
-        id
     }
 }
 
-function receivePostsSuccess(id, posts) {
+function receivePostsSuccess(posts) {
     return {
         type: apiTypes.GET_POSTS_SUCCESS,
-        id,
         posts,
         receivedAt: Date.now()
     }
 }
 
-function receivePostsFail(id, error) {
+function receivePostsFail(error) {
     return {
         type: apiTypes.GET_POSTS_FAIL,
-        id,
         error,
         receivedAt: Date.now()
     }
 }
 
 
-export function getPosts(id) {
-    const url = apiTypes.API_POSTS_URL + (id || '');
+export function getPosts() {
+    const url = apiTypes.API_POSTS_URL;
     return dispatch => {
-        dispatch(requestPosts(id));
+        dispatch(requestPosts());
         return axios.get(url)
-            .then(response => dispatch(receivePostsSuccess(id, response)))
-            .catch(error => dispatch(receivePostsFail(id, error)))
+            .then(response => dispatch(receivePostsSuccess(response)))
+            .catch(error => dispatch(receivePostsFail(error)))
     }
 }

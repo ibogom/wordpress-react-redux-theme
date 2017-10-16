@@ -1,13 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { RouteActions } from '../../actions';
-import { ApiActions } from '../../actions';
 
 class NotFound extends React.Component {
 
     componentDidMount(){
         this.props.dispatch(RouteActions.setRoute('not found'));
-        this.props.dispatch(ApiActions.getPosts());
     }
 
     render() {

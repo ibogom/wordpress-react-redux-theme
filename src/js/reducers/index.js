@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import routes from './routes';
-import api from './api';
+import API from './api/';
 
 const AppReducers = combineReducers({
     routes,
-    api
+    API
 });
 
 export default AppReducers

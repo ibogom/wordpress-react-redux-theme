@@ -11,13 +11,12 @@ class PageHandler extends React.Component {
 
     constructor(props){
         super(props);
-
         this.getPostData = this.getPostData.bind(this);
         this.getPageContent = this.getPageContent.bind(this);
     }
 
     componentDidMount(){
-        this.props.dispatch(RouteActions.setRoute(this.props.route.title));
+        this.props.dispatch(RouteActions.setRoute(this.props.route));
         this.props.dispatch(ApiActions.getPosts());
     }
 
@@ -33,7 +32,7 @@ class PageHandler extends React.Component {
     }
 
     getPageContent(page, i){
-        if(page.status === 'publish' && '/' + page.slug === this.props.route.url) {
+        if(page.status === 'publish' && page.slug === this.props.route) {
             return (<section className={postElement} key={i}>
                 <div className={postData} dangerouslySetInnerHTML={{__html: page.content.rendered}}/>
                 <div className={postData}>author : {page.author} </div>
@@ -44,8 +43,9 @@ class PageHandler extends React.Component {
     }
 
     render() {
-        const posts = this.props.posts && this.props.posts.data.map((post, i) => this.getPostData(post, i));
-        const pageContent = this.props.pages && this.props.pages.data.map((page, i) => this.getPageContent(page, i));
+        const posts = this.props.posts.data && this.props.posts.data.map((post, i) => this.getPostData(post, i));
+        const pageContent = this.props.pages.data && this.props.pages.data.map((page, i) => this.getPageContent(page, i));
+
         return (<div className={postsWrapper}>
                 {pageContent || 'Loading...'}
                 {posts || 'Loading...'}
