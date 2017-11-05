@@ -12,7 +12,7 @@ const AppReducers = combineReducers({
 });
 
 export function isLoadingComplete(state) {
-    return state.API.menus.loaded && state.API.pages.loaded && state.API.menuItems.length;
+    return (state.API.menus.loaded && state.API.pages.loaded && state.API.menuItems.length) || state.initial.loaded;
 }
 
 export default AppReducers

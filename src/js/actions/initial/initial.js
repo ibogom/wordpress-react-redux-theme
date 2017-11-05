@@ -31,19 +31,21 @@ export function initialRequest() {
         let getPages = dispatch(ApiActions.getPages());
         let getMenus = dispatch(ApiActions.getMenus());
 
-        return Promise.all([getPages, getMenus]).then(responses => {
+        return Promise.all([getPages, getMenus])
+            .then(responses => {
 
-            const menuItems = [];
+                const menuItems = [];
 
-            responses.forEach(response =>{
-                response.type === ApiTypes.GET_MENUS_SUCCESS && response.menus.data.forEach(menu => {
-                    menuItems.push(dispatch(ApiActions.getMenuItems(menu)));
+                responses.forEach(response => {
+                    response.type === ApiTypes.GET_MENUS_SUCCESS && response.menus.data.forEach(menu => {
+                        menuItems.push(dispatch(ApiActions.getMenuItems(menu)));
+                    });
                 });
-            });
 
-            return Promise.all(menuItems)
-                          .then(response => dispatch(onGetInitialRequestComplete(response)))
-                          .catch(error => dispatch(onGetInitialRequestFailed(error)));
-        });
+                return Promise.all(menuItems)
+                    .then(response => dispatch(onGetInitialRequestComplete(response)))
+                    .catch(error => dispatch(onGetInitialRequestFailed(error)));
+            })
+            .catch(error => dispatch(onGetInitialRequestFailed(error)));
     }
 };
