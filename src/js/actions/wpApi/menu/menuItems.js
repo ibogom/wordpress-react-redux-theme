@@ -25,15 +25,12 @@ function onGetMenuItemsFail(error) {
     }
 }
 
-
-export function getMenuItems(menus) {
+export function getMenuItems(menu) {
     return dispatch => {
-        menus.data.every(menu => {
-            const url = apiTypes.API_MENUS_URL + menu.ID;
-            dispatch(requestMenuItems(menu.ID));
-            return axios.get(url)
-                .then(response => dispatch(onGetMenuItemsSuccess(response)))
-                .catch(error => dispatch(onGetMenuItemsFail(error)))
-        });
+        const url = apiTypes.API_MENUS_URL + menu.ID;
+        dispatch(requestMenuItems(menu.ID));
+        return axios.get(url)
+            .then(response => dispatch(onGetMenuItemsSuccess(response)))
+            .catch(error => dispatch(onGetMenuItemsFail(error)))
     }
 }

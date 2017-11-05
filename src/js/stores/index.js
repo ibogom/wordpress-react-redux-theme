@@ -6,4 +6,5 @@ import AppReducers from '../reducers';
 
 const store = compose(applyMiddleware(thunk))(createStore)(AppReducers);
 
+
 export default store;

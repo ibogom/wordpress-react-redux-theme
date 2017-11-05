@@ -1,0 +1,14 @@
+@import "../../../assets/themes/default/color_cheme";
+@import "../../../assets/themes/default/font-sizes";
+
+.not-found{
+  .link-not-found {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-size: $font-20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}

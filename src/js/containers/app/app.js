@@ -1,13 +1,12 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { appWrapper } from './app.scss';
+import { isLoadingComplete } from '../../reducers';
+
+import './app.scss';
 
 /** COMPONENTS **/
-import { Header, Footer } from '../../components';
-
-/** PAGES NAVIGATION **/
-import Pages from '../../pages';
+import {Preloader} from '../../components';
 
 class App extends React.Component {
 
@@ -16,22 +15,18 @@ class App extends React.Component {
     };
 
     render() {
-        return (<div className={appWrapper}>
-                    <Header {...this.props} />
-                    <Pages {...this.props} />
-                    <Footer/>
-                </div>)
+        return (<div className="app-wrapper">
+                { this.props.loaded ? this.props.children : <Preloader/> }
+             </div>)
     }
 };
 
-/*TODO add selectors for routes and pages to the utils file */
-
 function mapStateToProps (state) {
     return {
-        route: state.routes.route,
-        posts: state.API.posts,
+        menu: state.API.menu,
         pages: state.API.pages,
-        menus: state.API.menus
+        posts: state.API.posts,
+        loaded: isLoadingComplete(state)
     }
 }
 

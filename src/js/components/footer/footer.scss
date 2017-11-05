@@ -1,24 +1,42 @@
 @import "../../../assets/themes/default/color_cheme";
-
-$footer-height: 50px;
+@import "../../../assets/themes/default/font-sizes";
+@import "../../../assets/themes/default/variables";
 
 .footer{
-  width: 100%;
+  width: 90%;
   height: $footer-height;
-  position: fixed;
+  position: relative;
   display: table;
   bottom: 0;
-  background-color: $scnd-clr;
+  margin: 0 auto;
+  border-top: 1px solid $brdr-light;
+  span{
+    color: $font-thrd-clr;
+    text-align: center;
+    margin: 0 10px;
+    font-size: $font-14px;
+  }
+  .one, .two, three, .four{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
   .one{
-    display: table-cell;
+    text-align: left;
+    width: 30%;
   }
+
   .two{
-    display: table-cell;
+    width: 40%;
+    span{
+      font-size: $font-12px;
+      color: $font-scnd-clr;
+    }
   }
-  .three{
-    display: table-cell;
-  }
+
   .four{
-    display: table-cell;
+    text-align: right;
+    width: 30%;
   }
 }

@@ -2,19 +2,19 @@
 $pr-clr: #fff;
 $scnd-clr: #f2f2f2;
 $third-clr: #aaaaaa;
-$fourth-clr: #7c7c7c;
+$fourth-clr: #222222;
 
 /* DEFAULTS FONTS COLORS */
 $font-pr-clr: #fff;
 $font-scnd-clr: #000000;
-$font-thrd-clr: #e64c65;
-$font-fourth-clr: #4fc4f6;
+$font-thrd-clr: #aaabac;
+$font-fourth-clr: #25f1b0;
 
 /* DEFAULTS BUTTONS COLORS */
 $btn-info: #007bb6;
 $btn-warn: #ffbc4d;
 $btn-def: #1f253d;
-$btn-scs: #11a8ab;
+$btn-scs: #25f1b0;
 $btn-err: #ce0707;
 $btn-def-opacity: rgba(255,255,255,.3);
 
@@ -35,8 +35,9 @@ $h2-clr: #35aadc;
 $h1-clr: #394264;
 
 /* DEFAULTS BORDER COLORS */
-$brdr-def: #cfcfcf;
-$brdr-scs: #22ae6f;
+$brdr-def: #2c2c2c;
+$brdr-light: #f2f2f2;
+$brdr-scs: #25f1b0;
 $brdr-info: #005C90;
 $brdr-warn: #efab53;
 $brdr-err: #9B0000;

@@ -43,10 +43,7 @@ module.exports = {
                         {
                             loader: 'css-loader',
                             query: {
-                                modules: true,
-                                sourceMap: isDevMode,
-                                importLoaders: 2,
-                                localIdentName: isDevMode ? '[name]__[local]___[hash:base64:5]' : '[hash:base64:5]'
+                                sourceMap: isDevMode
                             }
                         },
                         'sass-loader'

@@ -1486,6 +1486,32 @@
     {
       "icon": {
         "paths": [
+          "M384 690l452-452 60 60-512 512-238-238 60-60z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "tags": [
+          "check"
+        ],
+        "defaultCode": 58826,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "order": 227,
+        "ligatures": "check",
+        "id": 148,
+        "prevSize": 24,
+        "code": 58826,
+        "name": "check"
+      },
+      "setIdx": 2,
+      "setId": 3,
+      "iconIdx": 148
+    },
+    {
+      "icon": {
+        "paths": [
           "M726 854c36 0 64-28 64-64s-28-64-64-64-64 28-64 64 28 64 64 64zM342 854c36 0 64-28 64-64s-28-64-64-64-64 28-64 64 28 64 64 64zM824 678c30 28 50 68 50 112 0 82-66 148-148 148-76 0-138-56-148-128h-90c-10 72-70 128-146 128-82 0-150-66-150-148 0-56 32-106 78-132-10-14-90-188-90-188h-94v-86h148l40 86h622c0 78-28 150-72 208zM554 86c188 0 342 152 342 340h-342v-340z"
         ],
         "attrs": [],
@@ -1508,6 +1534,32 @@
       "setIdx": 2,
       "setId": 3,
       "iconIdx": 155
+    },
+    {
+      "icon": {
+        "paths": [
+          "M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "tags": [
+          "close"
+        ],
+        "defaultCode": 58829,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "order": 226,
+        "ligatures": "clear, close",
+        "id": 157,
+        "prevSize": 24,
+        "code": 58829,
+        "name": "close"
+      },
+      "setIdx": 2,
+      "setId": 3,
+      "iconIdx": 157
     },
     {
       "icon": {
@@ -3016,6 +3068,110 @@
       "setIdx": 2,
       "setId": 3,
       "iconIdx": 407
+    },
+    {
+      "icon": {
+        "paths": [
+          "M316 334l196 196 196-196 60 60-256 256-256-256z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "tags": [
+          "keyboard_arrow_down"
+        ],
+        "defaultCode": 58131,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "order": 222,
+        "ligatures": "keyboard_arrow_down",
+        "id": 411,
+        "prevSize": 24,
+        "code": 58131,
+        "name": "keyboard_arrow_down"
+      },
+      "setIdx": 2,
+      "setId": 3,
+      "iconIdx": 411
+    },
+    {
+      "icon": {
+        "paths": [
+          "M658 686l-60 60-256-256 256-256 60 60-196 196z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "tags": [
+          "keyboard_arrow_left"
+        ],
+        "defaultCode": 58132,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "order": 223,
+        "ligatures": "keyboard_arrow_left",
+        "id": 412,
+        "prevSize": 24,
+        "code": 58132,
+        "name": "keyboard_arrow_left"
+      },
+      "setIdx": 2,
+      "setId": 3,
+      "iconIdx": 412
+    },
+    {
+      "icon": {
+        "paths": [
+          "M366 698l196-196-196-196 60-60 256 256-256 256z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "tags": [
+          "keyboard_arrow_right"
+        ],
+        "defaultCode": 58133,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "order": 224,
+        "ligatures": "keyboard_arrow_right",
+        "id": 413,
+        "prevSize": 24,
+        "code": 58133,
+        "name": "keyboard_arrow_right"
+      },
+      "setIdx": 2,
+      "setId": 3,
+      "iconIdx": 413
+    },
+    {
+      "icon": {
+        "paths": [
+          "M316 658l-60-60 256-256 256 256-60 60-196-196z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "tags": [
+          "keyboard_arrow_up"
+        ],
+        "defaultCode": 58134,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "order": 225,
+        "ligatures": "keyboard_arrow_up",
+        "id": 414,
+        "prevSize": 24,
+        "code": 58134,
+        "name": "keyboard_arrow_up"
+      },
+      "setIdx": 2,
+      "setId": 3,
+      "iconIdx": 414
     },
     {
       "icon": {

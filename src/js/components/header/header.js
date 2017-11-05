@@ -1,45 +1,32 @@
 import React from 'react';
-import {header, left, right, middle, section, navigation, inLine, active} from './header.scss';
-import {Link} from 'react-router-dom';
+import './header.scss';
+import PropTypes from 'prop-types';
 
 export default class Header extends React.Component {
 
     static propTypes = {
-        route: React.PropTypes.string,
-        routes: React.PropTypes.array
+        onClick: PropTypes.func.isRequired
     };
 
     static defaultProps = {};
 
-    renderNavigation() {
-        const links = this.props.menus && this.props.menus.map(menu => {
-           return menu.items.map((item, i) =>{
-               return <Link key={i} to={item.object_slug}
-                                className={inLine + (this.props.route === decodeURI(item.object_slug) ? ' ' + active : '')}>
-                       {item.title}
-                   </Link>
-           });
-        });
-        return (<nav className={navigation}>
-            {links}
-        </nav>)
-    }
-
     render() {
-        return (<header className={header}>
-            <div className={section}>
-                <div className={left}>
-
+        return (<header className="header">
+            <div className="section">
+                <div className="left">
+                    <span className="menu" onClick={this.props.onClick}>
+                        <span>меню</span>
+                    </span>
                 </div>
-                <div className={middle}>
-                    {this.props.route}
+                <div className="middle">
+                    <div className="contacts">
+                        <a href="tel:050 123 45 67">050 123 45 67</a>
+                        /
+                        <a href="tel:066 123 45 67">066 123 45 67</a>
+                    </div>
+                    { this.props.children }
                 </div>
-                <div className={right}>
-
-                </div>
-            </div>
-            <div className={section}>
-                {this.renderNavigation()}
+                <div className="right" />
             </div>
         </header>)
     }

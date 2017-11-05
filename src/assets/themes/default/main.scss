@@ -1,5 +1,8 @@
 @import "color_cheme";
 @import "fonts";
+@import "font-sizes";
+@import "icons";
+@import "variables";
 
 /** HEADER **/
 
@@ -9,6 +12,27 @@ h1, h2, h3{
   text-transform: uppercase;
   color: $font-scnd-clr;
   padding-top: 20px;
+}
+
+/** BUTTONS **/
+
+.btn-scs{
+  width: 200px;
+  background-color: $brdr-scs;
+  color: $font-pr-clr;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  text-align: center;
+  margin: 15px auto;
+  border-radius: 3px;
+  letter-spacing: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  &:hover{
+    background-color: lighten($brdr-scs, 20%);
+  }
 }
 
 /** INPUTS **/
@@ -81,15 +105,67 @@ html, body {
   color: $font-scnd-clr;
 }
 
-$default-wrapper-height: 100%;
-$footer-and-header-height: 100px;
-
 .main{
   display: table;
-  min-height: calc(#{$default-wrapper-height} - #{$footer-and-header-height});
+  width: 100%;
+  padding-top: $header-height;
+  min-height: calc(#{$default-wrapper-height} - #{$header-height});
   .wrapper{
     display: table-cell;
     vertical-align: middle;
+  }
+}
+
+h1.title{
+  letter-spacing: 6px;
+  font-weight: bold;
+  font-family: 'Roboto-Bold', sans-serif;
+}
+
+h3.title{
+  color: $font-pr-clr;
+  font-size: $font-20px;
+}
+
+.contacts{
+  display: block;
+  color: $font-thrd-clr;
+  font-weight: 400;
+  font-size: $font-14px;
+  a{
+    color: $font-thrd-clr;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 10px;
+    &:hover{
+      color: $font-scnd-clr;
+    }
+  }
+}
+
+.slogan{
+  width: 50%;
+  color: $font-thrd-clr;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Georgia', sans-serif;
+  font-weight: 100;
+  font-size: $font-14px;
+  font-style: italic;
+  line-height: $font-26px;
+}
+
+.p{
+  color: $font-thrd-clr;
+  font-size: $font-12px;
+  margin: 0;
+}
+
+.link{
+  text-decoration: none;
+  color: $font-fourth-clr;
+  &:hover{
+    text-decoration: underline;
   }
 }
 

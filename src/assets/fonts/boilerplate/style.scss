@@ -3,9 +3,9 @@
 @font-face {
   font-family: 'boilerplate';
   src:
-    url('#{$icomoon-font-path}/boilerplate.ttf?bmjarz') format('truetype'),
-    url('#{$icomoon-font-path}/boilerplate.woff?bmjarz') format('woff'),
-    url('#{$icomoon-font-path}/boilerplate.svg?bmjarz#boilerplate') format('svg');
+    url('#{$icomoon-font-path}/boilerplate.ttf?5w8suz') format('truetype'),
+    url('#{$icomoon-font-path}/boilerplate.woff?5w8suz') format('woff'),
+    url('#{$icomoon-font-path}/boilerplate.svg?5w8suz#boilerplate') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -310,9 +310,19 @@ i {
     content: $i-chat;
   }
 }
+.i-check {
+  &:before {
+    content: $i-check;
+  }
+}
 .i-child_friendly {
   &:before {
     content: $i-child_friendly;
+  }
+}
+.i-close {
+  &:before {
+    content: $i-close;
   }
 }
 .i-cloud_done {
@@ -603,6 +613,26 @@ i {
 .i-invert_colors {
   &:before {
     content: $i-invert_colors;
+  }
+}
+.i-keyboard_arrow_down {
+  &:before {
+    content: $i-keyboard_arrow_down;
+  }
+}
+.i-keyboard_arrow_left {
+  &:before {
+    content: $i-keyboard_arrow_left;
+  }
+}
+.i-keyboard_arrow_right {
+  &:before {
+    content: $i-keyboard_arrow_right;
+  }
+}
+.i-keyboard_arrow_up {
+  &:before {
+    content: $i-keyboard_arrow_up;
   }
 }
 .i-laptop_mac {

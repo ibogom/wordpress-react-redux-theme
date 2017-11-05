@@ -4,15 +4,20 @@ import * as ApiActions from './wpApi';
 import * as routeTypes from './routes/routeTypes';
 import * as RouteActions from './routes/routes';
 
-export { apiTypes }
-export { ApiActions }
+import * as initialTypes from './initial/initialTypes';
+import * as InitialAction from './initial/initial';
 
-export { routeTypes }
-export { RouteActions }
+import * as appTypes from './appTypes';
+import * as AppActions from './appActions';
 
-export function initialRequest() {
-    return dispatch => {
-        dispatch(ApiActions.getPages())
-            .then(dispatch(ApiActions.getMenus()));
-    }
-};
+export {apiTypes}
+export {ApiActions}
+
+export {routeTypes}
+export {RouteActions}
+
+export {initialTypes}
+export {InitialAction}
+
+export {appTypes}
+export {AppActions}

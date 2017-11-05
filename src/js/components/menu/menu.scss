@@ -1,0 +1,99 @@
+@import "../../../assets/themes/default/color_cheme";
+@import "../../../assets/themes/default/font-sizes";
+@import "../../../assets/themes/default/icons";
+
+$nav-menu-width: 250px;
+
+.navigation {
+  position: fixed;
+  width: $nav-menu-width;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  display: table;
+  background-color: $fourth-clr;
+  table-layout: fixed;
+  z-index: $high-index;
+  transform: translate3d(-$nav-menu-width - 50, 0, 0);
+  transition: 300ms;
+  &.open{
+    transform: translate3d(0, 0, 0);
+  }
+  .welcome-text{
+    color: $font-thrd-clr;
+    padding: 0;
+    width: 180px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-size: $font-14px;
+    line-height: $font-22px;
+  }
+
+  .social{
+    width: 180px;
+    min-height: 20px;
+    margin: 15px 30px;
+    border-bottom: 1px solid $brdr-def;
+  }
+
+  .block{
+    width: 100%;
+    display: block;
+    height: 30px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+  }
+
+  .inLine {
+    width: auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .active {
+    color: $font-fourth-clr;
+  }
+
+  a {
+    color: $font-thrd-clr;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Roboto-Thin', sans-serif;
+    &:hover{
+      color: $font-pr-clr;
+    }
+  }
+
+  .close{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top:0;
+    cursor: pointer;
+    &:hover:before{
+      transform: rotate(180deg);
+      transition: 300ms;
+    }
+    &:before{
+      content: $i-close;
+      color: $font-pr-clr;
+      text-align: center;
+      display: block;
+      font-size: $font-24px;
+      padding: 7px;
+      box-sizing: border-box;
+      font-family: 'icons',sans-serif;
+      transition: 300ms;
+    }
+  }
+
+  .loading {
+    width: 100%;
+    padding: 10px 30px;
+    color: $font-thrd-clr;
+    display: block;
+  }
+}

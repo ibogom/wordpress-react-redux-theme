@@ -4,7 +4,7 @@
   "description": "redux, react, boilerplate",
   "main": "main.js",
   "scripts": {
-    "start": "NODE_ENV=development && webpack-dev-server --content-base src --inline --hot --port 3000",
+    "start": "export NODE_ENV=development && webpack-dev-server --content-base src --inline --hot --port 3000",
     "prod": "export NODE_ENV=production && webpack",
     "test": "jest --coverage -u -c=./configs/jest.config.js"
   },

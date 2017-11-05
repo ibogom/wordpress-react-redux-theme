@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 /** CONTAINERS **/
-import {App} from './containers';
+import {App, HeaderContainer, MenuContainer, FooterContainer, PagesContainer} from './containers';
 
 /** STORES **/
 import store from './stores';
@@ -14,12 +14,17 @@ import store from './stores';
 import '../assets/themes/default/main.scss';
 
 /** ACTIONS **/
-import { initialRequest } from './actions';
+import {InitialAction} from './actions';
 
-store.dispatch(initialRequest());
+store.dispatch(InitialAction.initialRequest());
 
 render(<Provider store={store}>
     <Router>
-        <App/>
+        <App>
+            <MenuContainer/>
+            <HeaderContainer/>
+            <PagesContainer/>
+            <FooterContainer/>
+        </App>
     </Router>
 </Provider>, document.getElementById('app'));
